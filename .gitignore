@@ -3,3 +3,4 @@ data/*.pt
 __pycache__/
 results/run.log
 tune.log
+.social/
