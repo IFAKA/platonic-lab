@@ -23,7 +23,7 @@ More than 2x, from the pairing alone. It held in 3 of 3 seeds. Chance is 0.01.
 
 ## X, angle 3: the limits (thread reply or later post)
 What my check does not show:
-- models are ~9M params, not 72B
+- models are ~11M params, not 72B
 - good pairs need to know which captions describe the same photo, and people wrote those looking at the photo
 - retrieval (R@1) gap is smaller: 0.084 vs 0.057
 - one dataset, one image model

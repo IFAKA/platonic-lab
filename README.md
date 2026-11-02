@@ -18,12 +18,13 @@ for its photo, on 1000 held-out photos. Chance is 0.010.
 | B: one caption, words hidden (bad views) | 0.192 | 0.196 |
 | C: next-word prediction | 0.148 | 0.168 |
 
+Anti-collapse loss is VICReg-style (variance + covariance), not the paper's SIGReg; it is the same for A and B.
 Full table with R@1: `results/table.md`. Every method uses the same encoder (4 layers, width 256), the same
 captions, steps (3000), batch (256) and anti-collapse loss. Only the training pairs differ. The decision rule and
 the learning-speed search were written into `src/lab.py`, `src/tune_lean.sh` and `src/tune_rerun.sh` before the runs.
 
 ## What this does not show
-- Small models (about 9M parameters) and 8000 training photos. Not the paper's 109M or 72B results.
+- Small models (about 11M parameters) and 8000 training photos. Not the paper's 109M or 72B results.
 - Good views need to know which captions describe the same photo. People wrote those captions looking at the photos,
   so the supervision is not free. The paper says this too.
 - Image-to-caption retrieval (R@1) shows a smaller gap than mutual 10-NN: 0.084 / 0.063 / 0.057 (same speed).
